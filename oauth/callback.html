@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="utf-8"><title>認証コード</title></head>
+<body style="font-family:sans-serif;text-align:center;padding:32px">
+<h1>認証コード</h1>
+<p>下のコードをコピーして、Macのターミナルに貼り付けてください。</p>
+<div id="code" style="font-size:18px;word-break:break-all;border:1px solid #999;padding:16px;margin:16px auto;max-width:640px"></div>
+<script>
+var c = new URLSearchParams(location.search).get('code');
+document.getElementById('code').textContent = c ? c : 'コードが見つかりませんでした';
+</script>
+</body>
+</html>
